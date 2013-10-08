@@ -7,65 +7,65 @@ var myEmail,
     myMayor,
 	myFavTextEditor,
 	myZcode,
-	PiValue,
-	BookCost,
-	Light,
-	SmanPrediction;
+	piValue, //JG: Variables shouldn't start with a capital letter
+	bookCost,
+	lightIsOn,
+	supermanCanFly;
 
 // E-mail account
- myEmail = 'fswahn@montgomerycollege.edu';
+myEmail = 'fswahn@montgomerycollege.edu';
 // College Mayor 
- myMayor = 'Simulation and Computer Gaming';
+myMayor = 'Simulation and Computer Gaming';
 // Favorite Text Editor Software
- myFavTextEditor = 'Adobe DreamWeaver';
+myFavTextEditor = 'Adobe Dreamweaver';
 // Zip Code 
- myZcode = 20876;
-// PiValue up to the fifth decimal
- PiValue = 3.14159;
+myZcode = 20876;
+// piValue up to the fifth decimal
+piValue = 3.14159;
 // Total cost for a ten dollar book plus 5% sales tax
- BookCost = 10.5;
+bookCost = 10.5;
 // Whether or not the light switch is on
- Light = false;
+lightIsOn = false;
 // Whether or not Superman can fly
- SmanPrediction = true;
+supermanCanFly = true;
 
  //Exercise 3
  //Variable console check
- console.log(typeof myEmail);
- console.log(typeof myMayor);
- console.log(typeof myFavTextEditor);
- console.log(typeof myZcode);
- console.log(typeof PiValue);
- console.log(typeof BookCost);
- console.log(typeof Light);
- console.log(typeof SmanPrediction);
+console.log(typeof myEmail);
+console.log(typeof myMayor);
+console.log(typeof myFavTextEditor);
+console.log(typeof myZcode);
+console.log(typeof piValue);
+console.log(typeof bookCost);
+console.log(typeof lightIsOn);
+console.log(typeof supermanCanFly);
 
 //Exercise 4
 // String variable storage
 var surprise,
     linK,
-    JavaScript;
+    javaScript;
 
 // Dog surpise
- surprise = 'The dog\'s bitting my shoe';
+surprise = 'The dog\'s bitting my shoe';
 // link syntaxis 
- linK = '<a href="#">Some link</a>';
+linK = '<a href="#">Some link</a>';
 // Js fact
- Javascript = 'Javascript is "easy" if you are good at it';
+javascript = 'Javascript is "easy" if you are good at it';
 
 //Exercise 5
 // Topic Array of things I would like to learn this semester
- var myTopicArray;
+var myTopicArray;
 
 //Array items
 myTopicArray = [
     "JavaScript",
     "More Html",
-    "More Css"
+    "More Css",
     "Web Design",
     "Maya",
     "Environment Biology",
-    "Parkour"
+    "Parkour",
     "Salsa",
     "Management",
     "Leadership Skills",
@@ -92,16 +92,12 @@ myTopicArray = [
 
 //Exercise 7
 // Console check for the array length
- console.log(typeof myTopicArray.length); 
+ console.log(myTopicArray.length); 
 
 //Exercise 8
 //New function to operate button clickMe
 //Define variable
- var clickMe;
-
-clickMe = 'leave me alone!';
 
 document.getElementById('clickMe').onclick = function () {
-	clickMe = document.getelementById('clickMe').value;
-
+	console.log('Leave me alone!');
 };
