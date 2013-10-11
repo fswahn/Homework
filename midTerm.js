@@ -133,11 +133,8 @@ function average(num1, num2, num3) {
 
 
 //Problem 6
+
 //What is the hardest part to learn about Javascript?
 //Well for me ... it would be the placement of variables and functions ... how can they ...
 //interact with each other and viceversa ... is a bit confusiog when you combine that with ...
 //different opperators and loops.
-
-
-
-
