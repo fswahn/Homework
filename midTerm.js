@@ -11,19 +11,30 @@ var course,
 //The name of this coruse
 course = 'ca276';
 //Number of days in March
-daysinMarch = 'March has 31 days';
+//JG: Should be a number
+// daysinMarch = 'March has 31 days';
+daysinMarch = 31;
 //Do you know javascript
-jsIntel = 'I beggining to learn js';
+// JG: Should be a Boolean
+jsIntel = true;
 //A list of the best restaurant in Rockville
+//JG: Array looks good
 restntList = [
+	//JG: Watch out for spelling mistakes
 	'Buffalo Wings',
-	'Sub-way',
+	'Subway',
 	'Chipotle',
-	'Wenddys',
+	'Wendy\'s',
+	//JG: Never heard of this. Are their burgers any good?
 	'High 5'
 ];
+
+//JG: Good list of restaurants by the way.
+
 //Expected annual salary of a Web developer
-webdesignerSalary = '95000 dollars';
+//JG: This should be a number
+// webdesignerSalary = '95000 dollars';
+webdesignerSalary = 95000;
 
 
 //Problem 2
@@ -34,7 +45,8 @@ var amount1,
 	amount2;
 
 amount1 = 20;
-amount2 = 20 * 0.25;
+//JG: It's always good to reuse your variables when it makes sense
+amount2 = amount1 * 0.25;
 console.log('The price of a 20 dollar drink with a 25% sales tax');
 console.log(amount1 + amount2);
 
@@ -43,7 +55,7 @@ var cost,
 	disCnt,
 	cost = 400;
 
-disCnt = 400 * 0.15;
+disCnt = cost * 0.15;
 
 console.log('The cost of a 400 dollar smartphone at 15% discount');
 console.log(cost - disCnt);
@@ -87,27 +99,30 @@ console.log(decm1 * decm2 * adtionalamount);
 //3 if you editor is 'Sublime Text' then send "I am awesome" to the console.
 //4 if you editor is 'Notepad' then send "Wrong editor" to the console.
 
-var Ename = 'editor';
+//JG: Don't start variable names with capital letters
+var sampleEditor = 'Notepad';
 
-function editorname(Ename) {
-	var editor
+//JG: Use camel case
+function editorName(editorName) {
+	var response;
 
-	if (Ename === 'Eclipse') {
-		editor = 'Java developer';
-	} else if (Ename === 'Aptana Studio') {
-		editor = 'Web developer';
-	} else if (Ename === 'Sublime Text') {
-		editor = 'I am awesome';
-	} else(Ename === 'Notepad') {
-		editor = 'Wrong editor';
+	if (editorName === 'Eclipse') {
+		response = 'Java developer';
+	} else if (editorName === 'Aptana Studio') {
+		response = 'Web developer';
+	} else if (editorName === 'Sublime Text') {
+		response = 'I am awesome';
+		//JG: There was a syntax error below. You had "else" instead of "else if".
+	} else if (editorName === 'Notepad') {
+		response = 'Wrong editor';
 	}
 
-	return editor;
+	return response;
 }
 
-console.log(editorname(Ename));
-console.log(editorname('Ecilpse'));
-console.log(editorname('Aptana Studio'));
+console.log(editorName(sampleEditor));
+console.log(editorName('Eclipse'));
+console.log(editorName('Aptana Studio'));
 
 
 //Problem 4
@@ -116,6 +131,9 @@ console.log(editorname('Aptana Studio'));
 
 var num,
 	i;
+
+//JG: console.log was showing 'undefined' at the beginning of your string
+num = '';
 
 for (i = 5; i <= 15; i++) {
 	num += '   number + ' + i + '.';
@@ -129,10 +147,12 @@ console.log(num);
 // To get the average you will add them together and divide the total by three.
 
 function average(num1, num2, num3) {
+	//JG: Nice use of parseFloat! This will help avoid unwanted string concatenations.
 	num1 = parseFloat(num1);
 	num2 = parseFloat(num2);
 	num3 = parseFloat(num3);
-	return ((num1 + num2 + num3) / 3);
+	//JG: I got rid of superfluous parentheses.
+	return (num1 + num2 + num3) / 3;
 }
 
 
@@ -142,3 +162,8 @@ function average(num1, num2, num3) {
 //Well for me ... it would be the placement of variables and functions ... how can they ...
 //interact with each other and viceversa ... is a bit confusiog when you combine that with ...
 //different opperators and loops.
+
+//JG: JavaScript is similar to C and Java in syntax. The good news is that once you get
+// used to writing in this language you can pick up other ones more easily. The bad news
+// is that other programming languages different in fundamental concepts such as inheritance
+// and closures.
