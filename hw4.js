@@ -48,7 +48,7 @@ var athlete3 = {
 	introduce: function() {
 		return 'Hello! My name is ' + this.name + 'and I am from ' + this.countryofOrigin;
 	},
-	addMedal = function(medal) {
+	addMedal: function(medal) {
 		this.medals.push(medal);
 	}
 };
