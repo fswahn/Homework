@@ -18,10 +18,11 @@ console.log(document.querySelectorAll('form *'));
 console.log(document.querySelectorAll('#movies, #companies, #fast_food'));
 
 //f
-console.log(document.querySelectorAll('*[id]'));
+//JG: Asterisk doesn't hurt, but you can leave it off
+console.log(document.querySelectorAll('[id]'));
 
 //g
-console.log(document.querySelectorAll('*[id$=s]'));
+console.log(document.querySelectorAll('[id$=s]'));
 
 //h
 console.log(document.querySelectorAll('li:first-child'));
@@ -30,10 +31,10 @@ console.log(document.querySelectorAll('li:first-child'));
 console.log(document.querySelectorAll('li:nth-child(2)'));
 
 //j
-console.log(document.querySelectorAll('*:empty'));
+console.log(document.querySelectorAll(':empty'));
 
 //k
-console.log(document.querySelectorAll('*:checked'));
+console.log(document.querySelectorAll(':checked'));
 
 //l
 console.log(document.querySelectorAll('input[type=radio]'));
@@ -42,7 +43,7 @@ console.log(document.querySelectorAll('input[type=radio]'));
 console.log(document.querySelectorAll('input[type=radio]:checked'));
 
 //n
-console.log(document.querySelectorAll('table#names > tbody > tr > td:nth-child(3)'));
+console.log(document.querySelectorAll('#names > tbody > tr > td:nth-child(3)'));
 
 //o
 console.log(document.querySelectorAll('.hidden:not(form)'));
