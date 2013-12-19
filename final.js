@@ -1,10 +1,10 @@
 // Final Project js
 
 var form = document.querySelector('form');
-form.addEventListener('submit', function (e) {	
+form.addEventListener('submit', function(e) {
 	var errors, i, errorDiv, namePattern, emailPattern, phonePattern, urlPattern, agePattern;
 
-	errors= [];
+	errors = [];
 	errorDiv = document.getElementById('error');
 
 	//character validation
@@ -30,14 +30,14 @@ form.addEventListener('submit', function (e) {
 	}
 
 
-     //Age Validation
-    if (agePattern.test(this.age.value) === false) {
+	//Age Validation
+	if (agePattern.test(this.age.value) === false) {
 		errors.push('Age is invalid');
 	}
 
 	//Making sure  both home and mobile number are vanid
-	
-    //Home number
+
+	//Home number
 	if (phonePattern.test(this.home_number.value) === false) {
 		errors.push('Home number is invalid');
 	}
@@ -53,9 +53,9 @@ form.addEventListener('submit', function (e) {
 	}
 
 	//Validation date Picker
-			if (isDate(this.date.value) === false) {
-					errors.push('Invalid datepicking');
-			}
+	if (isDate(this.date.value) === false) {
+		errors.push('Invalid datepicking');
+	}
 
 	//Making sure Experience level is selected
 	if (this.level.value.length === 0) {
@@ -71,54 +71,51 @@ form.addEventListener('submit', function (e) {
 
 	//radio buttons
 	if (document.querySelectorAll('[name=meal]:checked').length === 0) {
-					errors.push('Please select at least one meal preference');
-				}
+		errors.push('Please select at least one meal preference');
+	}
 
 	//cheched buttons
 	if (document.querySelectorAll('[name=skills]:checked').length === 0) {
-					errors.push('Please select at least one skill');
-				}
-
-
-
+		errors.push('Please select at least one skill');
+	}
 
 	//If any inputs failed prevent form submit
-				if (errors.length > 0) {
-					//prevent form submit
-					e.preventDefault();
-					
-					//unhide
-					errorDiv.className = '';
-					
-					//clear out previous errors
-					errorDiv.innerHTML = errors.join('<br>');
-				}
+	if (errors.length > 0) {
+		//prevent form submit
+		e.preventDefault();
+
+		//unhide
+		errorDiv.className = '';
+
+		//clear out previous errors
+		errorDiv.innerHTML = errors.join('<br>');
+	}
 
 }, false);
 
 // date === 12/30/2013
-			function isDate(date) {
-				var dateParts;
+function isDate(date) {
+	var dateParts;
 
-				dateParts = date.split('/');
+	dateParts = date.split('/');
 
-				if (dateParts.length !== 3) {
-					return false;
-				}
+	if (dateParts.length !== 3) {
+		return false;
+	}
 
-				// All numbers
-				if (
-					isNaN(parseFloat(dateParts[0])) || 
-					isNaN(parseFloat(dateParts[1])) ||
-					isNaN(parseFloat(dateParts[2]))
-					) {
-					return false;
-				}
+	// All numbers
+	if (
+		isNaN(parseFloat(dateParts[0])) ||
+		isNaN(parseFloat(dateParts[1])) ||
+		isNaN(parseFloat(dateParts[2]))
+	) {
+		return false;
+	}
 
-				// Month validation
-				if (dateParts[0] < 1 && dateParts[0] > 12) {
-					return false;
-				}
+	// Month validation
+	if (dateParts[0] < 1 && dateParts[0] > 12) {
+		return false;
+	}
 
-				return true;
-			}
+	return true;
+}
